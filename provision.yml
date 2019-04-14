@@ -1,0 +1,13 @@
+---
+- hosts: router
+  remote_user: admin
+  become: yes
+  tasks:
+    - name: Install Firehol
+      apt:
+        name: firehol
+        state: present
+    - name: Install Fireqos
+      apt:
+        name: fireqos
+        state: present
